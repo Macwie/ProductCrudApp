@@ -1,4 +1,4 @@
-package com.macwie.product;
+package com.macwie.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

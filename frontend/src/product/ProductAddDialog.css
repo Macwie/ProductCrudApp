@@ -1,0 +1,11 @@
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 7.5em;
+    margin-top: 20px;
+}
+
+.dialog-header {
+    margin: 0;
+}

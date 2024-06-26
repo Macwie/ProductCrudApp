@@ -1,8 +1,8 @@
 version: '3.7'
 services:
-  app:
+  backend:
     build:
-      context: .
+      context: ./backend
       dockerfile: Dockerfile
     ports:
       - 8080:8080
@@ -31,6 +31,16 @@ services:
       retries: 10
       interval: 3s
       timeout: 30s
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
+    networks:
+      - app-network
 volumes:
   mysql-data:
 networks:
